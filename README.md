@@ -75,10 +75,22 @@ Nest is [MIT licensed](LICENSE).
  -->
 
 ## Path
-main api path  
+main api path (port 3000)  
 `http://localhost:3000`  
   
-swagger api path  
+swagger api path (port 3000)  
 `http://localhost:3000/swagger/api`  
 
-
+## Endpoint
+- create user  
+POST  
+`http://localhost:3000/users`  
+body
+```json
+{
+  "name": "Naveeharn Tehmarn",
+  "email": "63000001@kmitl.ac.th",
+  "password": "63000001",
+  "roles": ["member"]
+}
+```
