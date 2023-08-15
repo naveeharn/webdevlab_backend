@@ -90,7 +90,7 @@ body
 {
   "name": "Naveeharn Tehmarn",
   "email": "63000001@kmitl.ac.th",
-  "password": "random",
+  "password": "63000001",
   "roles": ["member"]
 }
 ```
