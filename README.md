@@ -75,10 +75,10 @@ Nest is [MIT licensed](LICENSE).
  -->
 
 ## Path
-main api path  
+main api path (port 3000)  
 `http://localhost:3000`  
   
-swagger api path  
+swagger api path (port 3000)  
 `http://localhost:3000/swagger/api`  
 
 ## Endpoint
