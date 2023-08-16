@@ -21,7 +21,7 @@ export class UsersController {
 		return this.usersService.findOne(user._id);
 	}
 
-	@Post()
+	@Post('create')
 	@Roles(RoleName.Admin)
 	async createNewUser(@Body() user: User) {
 		return await this.usersService.create(user);
