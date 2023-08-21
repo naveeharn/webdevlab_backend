@@ -41,4 +41,10 @@ export class UsersController {
 		const updatedUser = await this.usersService.updatedRoles(userId, body.update_roles);
 		return updatedUser;
 	}
+
+	@Get(':userId/roles')
+	async findByRole(@Body() body: { role: string }) {
+		const result = await this.usersService.findByRole(body.role);
+		return result;
+	}
 }

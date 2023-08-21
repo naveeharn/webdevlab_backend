@@ -1,4 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { IsNotEmpty } from 'class-validator';
 import { Document, HydratedDocument } from 'mongoose';
 import { RoleName } from 'src/utils/role.enum';
 
@@ -23,6 +24,9 @@ export class User {
 
 	@Prop({ type: String })
 	password: string;
+
+	@Prop({ type: String })
+	tablePosition: string;
 
 	@Prop({ type: [String], enum: RoleName, default: [RoleName.Member] })
 	roles: RoleName[];
