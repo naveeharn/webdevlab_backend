@@ -34,11 +34,22 @@ export class UsersController {
 		return result;
 	}
 
+	// @Patch(':userId/roles')
+	// @Roles(RoleName.Admin)
+	// async updateRoles(@Param('userId') userId: string, @Body() body: UpdateRolesDto, @CurrentUser() user: User) {
+	// 	// console.log(user);
+	// 	const updatedUser = await this.usersService.updatedRoles(userId, body.update_roles);
+	// 	return updatedUser;
+	// }
+
 	@Patch(':userId/roles')
-	@Roles(RoleName.Admin)
-	async updateRoles(@Param('userId') userId: string, @Body() body: UpdateRolesDto, @CurrentUser() user: User) {
-		// console.log(user);
-		const updatedUser = await this.usersService.updatedRoles(userId, body.update_roles);
-		return updatedUser;
-	}
+  	@Roles(RoleName.Admin)
+  	async updateRoles(
+    	@Param('userId') userId: string,
+    	@Body() body: UpdateRolesDto,
+    	@CurrentUser() user: User,
+  	) {
+    	const updatedUser = await this.usersService.updatedRoles(userId, body.update_roles);
+    	return updatedUser;
+  }
 }
