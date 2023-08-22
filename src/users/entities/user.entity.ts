@@ -28,7 +28,7 @@ export class User {
 	password: string;
 
 	@Prop({ type: [String], enum: RoleName, default: [RoleName.Member] })
-	// @IsArray()
+	@IsArray()
 	@IsEnum({ each: true })
 	roles: RoleName[];
 }
